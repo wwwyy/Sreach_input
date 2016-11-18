@@ -63,7 +63,6 @@
 				ev.target.style.background = '#123555'
 				ev.target.style.color = '#E69B03';
 				n = ev.target.index;
-				console.log(n)
 			} else {
 				text.value = text.value.split(ev.target.innerHTML).join('')
 				ev.target.style.background = ''
@@ -129,7 +128,7 @@
 				a[n].style.color = '#FFDE00'
 				
 			}
-			if (ev.keyCode==13) {
+			if (ev.keyCode==13&&ev.ctrlKey==false) {
 				if (!a[n].className) {
 					a[n].className = 'active'
 					text.value += a[n].innerHTML;
